@@ -23,5 +23,6 @@ public class SpringBootStartedApplication {
     //저장한 파일을 해당 started프로젝트에서 가져와 사용할수 있게되었다.
     //해서 어플리케이션을 런시키면 HoloRunner의 내용이 실행되게 된다
     //그런데 만약 위처럼 따로 Holoman을 또 빈으로 등록해서 올리면 어떻게 될까
-    //-> 기존 Holoman이 덮어쓴다고 한다.(위의 빈이 아닌 기존의 빈)
+    //-> 기존 Holoman이 덮어쓴다고 한다.(위의 빈이 아닌 기존의 빈) 어떻게 해결할까?
+    //autoconfig 어플리케이션의 Holoman을 빈으로 등록하는 설정에 @ConditionalOnMissingBean를 추가해주면 현 프로젝트에서 등록하는 빈을 우선 등록 해준다.
 }
