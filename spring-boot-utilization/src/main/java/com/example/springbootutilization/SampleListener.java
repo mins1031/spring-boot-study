@@ -1,11 +1,12 @@
 package com.example.springbootutilization;
 
-import org.springframework.boot.context.event.ApplicationStartedEvent;
+import org.springframework.boot.context.event.ApplicationStartingEvent;
 import org.springframework.context.ApplicationListener;
 
-public class SampleListener implements ApplicationListener<ApplicationStartedEvent> {
+public class SampleListener implements ApplicationListener<ApplicationStartingEvent> {
+
     @Override
-    public void onApplicationEvent(ApplicationStartedEvent event) {
+    public void onApplicationEvent(ApplicationStartingEvent event) {
         System.out.println("=======================");
         System.out.println("Application is starting");
         System.out.println("=======================");
